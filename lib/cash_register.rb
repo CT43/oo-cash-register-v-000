@@ -1,6 +1,7 @@
 require 'pry'
 
 class CashRegister
+
   attr_accessor :discount, :total, :item_list, :previous_total
 
 
@@ -36,6 +37,14 @@ class CashRegister
 
   def void_last_transaction
     @total = @previous_total
+  end
+
+
+  attr_accessor :discount, :total
+
+  def initialize(discount = 0)
+    @total = 0
+      @discount = discount
   end
 
 end
